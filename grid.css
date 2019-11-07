@@ -1,0 +1,31 @@
+/*
+    npm install -g browser-sync
+    browser-sync start --server --files "./grid.css"
+
+    https://www.youtube.com/watch?v=t6CBKf8K_Ac
+    https://scrimba.com/g/gR8PTE
+*/
+
+.container{
+    display: grid;
+    /*    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: 48px 200px 48px; */
+    grid-template: 48px 200px 48px / repeat(12, 1fr); /* rows / column - fr=fraction unit  - repeat 12 for more flexibility*/    
+    grid-gap: 3px;
+}
+
+.header{
+    grid-column: 2 / -1; /* start / end -  -1 = last column*/
+}
+
+.menu{
+    grid-row: 1 / 3;
+}
+
+.content{
+    grid-column: 2 / -1;
+}
+
+.footer{
+    grid-column: 1 / -1;
+}

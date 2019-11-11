@@ -1,28 +1,42 @@
-.container > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2em;
-    color: #ffeead;
-}
-
-html, body {
+html, body, section {
   background-color: #ffeead;
   margin: 10px;
+
 }
 
-.container > div:nth-child(1n) {
+.container {
+font-size: 1.5em;
+color: #fff;
+}
+
+.header {
   background-color: #468dc7;	
 }
 
-.container > div:nth-child(2n) {
+.menu {
     background-color: #ff6f69;
 }
 
-.container > div:nth-child(3n) {
+.gallery {
   background-color: #88d8b0;
+  padding: 5px;
 }
 
-.container > div:nth-child(4n) {
+.footer {
       background-color: #ffcc5c;
 }
+
+.gallery > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: #ffeead;
+}
+
+.gallery > div > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+

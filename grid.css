@@ -1,31 +1,55 @@
 /*
+    Sync css with browser:
     npm install -g browser-sync
     browser-sync start --server --files "./grid.css"
 
+    Tutorials:
     https://www.youtube.com/watch?v=t6CBKf8K_Ac
     https://scrimba.com/g/gR8PTE
 */
 
-.container{
+.container {
     display: grid;
-    /*    grid-template-columns: repeat(2, 1fr); 
-    grid-template-rows: 48px 200px 48px; */
-    grid-template: 48px 200px 48px / repeat(12, 1fr); /* rows / column - fr=fraction unit  - repeat 12 for more flexibility*/    
     grid-gap: 3px;
+    grid-template-areas: 	"header header"
+    "menu gallery"
+    "footer footer";
 }
 
 .header{
     grid-column: 2 / -1; /* start / end -  -1 = last column*/
+    grid-area: header;
 }
 
 .menu{
     grid-row: 1 / 3;
+    grid-area: menu;
 }
 
-.content{
-    grid-column: 2 / -1;
+.gallery {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-auto-rows: 75px;
+    grid-auto-flow: dense;
+    grid-area: gallery;
+}
+
+.horizontal {
+    grid-column: span 2;
+}
+
+.vertical {
+    grid-row: span 2;
+}
+
+.big {
+    grid-column: span 2;
+    grid-row: span 2;
 }
 
 .footer{
     grid-column: 1 / -1;
+    grid-area: footer;
+    
 }

@@ -5,7 +5,7 @@ Per Harald Borgen / Scrimba - CSS Tutorial: Grid
 
 > 🔨 CSS Tutorial : Grid from [Scrimba](https://scrimba.com/g/gR8PTEo)
 
-[Githubpage](https://raigyo.github.io/css-grid/)
+[Github page](https://raigyo.github.io/css-grid/)
 
 
 * * *
